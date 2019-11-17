@@ -49,7 +49,7 @@ module gomoku(CLOCK_50,
 	defparam VGA.RESOLUTION = "160x120";
 	defparam VGA.MONOCHROME = "FALSE";
 	defparam VGA.BITS_PER_COLOUR_CHANNEL = 1;
-	defparam VGA.BACKGROUND_IMAGE = "./img/green_grid_new.mif";
+	defparam VGA.BACKGROUND_IMAGE = "board.color.mif";
 
 endmodule 
 
