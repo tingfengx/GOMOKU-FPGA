@@ -7,16 +7,18 @@ module gomoku(CLOCK_50, PS2_CLK, PS2_DAT, KEY, LEDR, HEX0, HEX1, HEX2, HEX3, HEX
 	output VGA_CLK, VGA_HS, VGA_VS, VGA_BLANK_N, VGA_SYNC_N;
 	output [9:0] VGA_R, VGA_G, VGA_B;
 	
-	wire resetn;
-	assign resetn = KEY[0];
+	wire resetn = KEY[0];
+	// assign resetn = KEY[0];
 	
 	// wires left right up and down not used; space also not used
 	wire w, a, s, d, left, right, up, down, space, enter;
 	// game_state 
-	wire game_state, game_win_color;
+	wire game_state;
+	wire game_win_color;
 	
-	reg [2:0] in_x = 3'd3, in_y = 3'd3;
-	reg in_color = 1'b0;
+	reg [2:0] in_x = 3'd3
+	reg [2:0] in_y = 3'd3;
+	reg in_color = 1'b0; // black starts first
 	
 	hex_decoder hex0(.hex_digit(in_y), .segments(HEX0)), // y coord
 					hex1(.hex_digit(in_x), .segments(HEX1)), // x coord
@@ -61,14 +63,24 @@ module gomoku(CLOCK_50, PS2_CLK, PS2_DAT, KEY, LEDR, HEX0, HEX1, HEX2, HEX3, HEX
 		end
 	end
 	
-	board7 game_board(.clk(CLOCK_50), .resetn(resetn), .go(go), .x(in_x), .y(in_y), .color(in_color), .board_flat(board_flat), .state(game_state), .win_color(game_win_color));
+	board7 game_board(
+		.clk(CLOCK_50), 
+		.resetn(resetn), 
+		.go(go), 
+		.x(in_x), 
+		.y(in_y), 
+		.color(in_color), 
+		.board_flat(board_flat), 
+		.state(game_state), 
+		.win_color(game_win_color)
+	);
 	
-	reg display_board [7*7-1:0];
-	integer j;
-	initial begin
-		for (j = 0; j < 7*7; j = j + 1)
-			display_board[j] <= 1'b0;
-	end
+	reg display_board [7*7-1:0] = 49b'0;
+	// integer j;
+	// initial begin
+	// 	for (j = 0; j < 7*7; j = j + 1)
+	// 		display_board[j] <= 1'b0;
+	// end
 	
 	wire [7*7*2-1:0] board_flat;
 	wire [1:0] board [7*7-1:0];
@@ -132,8 +144,10 @@ module gomoku(CLOCK_50, PS2_CLK, PS2_DAT, KEY, LEDR, HEX0, HEX1, HEX2, HEX3, HEX
 		end
 	end
 	
-	localparam board_start_x = 8'd31 - 8'd7, // coords to start drawing from
-				  board_start_y = 7'd11 - 7'd7;
+	// localparam board_start_x = 8'd31 - 8'd7, // coords to start drawing from
+	// 			  board_start_y = 7'd11 - 7'd7;
+	localparam board_start_x = 8'd24;
+	localparam board_start_y = 7'd4;
 	
 	always@(*)
 	begin
@@ -143,8 +157,10 @@ module gomoku(CLOCK_50, PS2_CLK, PS2_DAT, KEY, LEDR, HEX0, HEX1, HEX2, HEX3, HEX
 				vga_y = wintxt_start_y + cy;
 			end
 			0: begin
-				vga_x = board_start_x + in_x * (8'd15 + 8'd1) + cx;
-				vga_y = board_start_y + in_y * (7'd15 + 7'd1) + cy;
+				vga_x = board_start_x + in_x * 8'd16 + cx;
+				vga_y = board_start_y + in_y * 7'd16 + cy;
+				// vga_x = board_start_x + in_x * (8'd15 + 8'd1) + cx;
+				// vga_y = board_start_y + in_y * (7'd15 + 7'd1) + cy;
 			end
 		endcase
 	end
@@ -177,11 +193,11 @@ module gomoku(CLOCK_50, PS2_CLK, PS2_DAT, KEY, LEDR, HEX0, HEX1, HEX2, HEX3, HEX
 	reg [0:67] wintxt [4:0];
 	always@(*)
 	begin
-		wintxt[0] = 68'b 01110011110111110111100011100100010111101111011001010101110111110011;
-		wintxt[1] = 68'b 10001010010101010100000100010100010100001001011001010100100100010011;
-		wintxt[2] = 68'b 10000011110101010111100100010100010111101111011001010100100100010011;
-		wintxt[3] = 68'b 10111010010101010100000100010010100100001010000001010100100100010000;
-		wintxt[4] = 68'b 01101010010101010111100011100001000111101001011000101001110100010011;
+		wintxt[0] = 68'b01110011110111110111100011100100010111101111011001010101110111110011;
+		wintxt[1] = 68'b10001010010101010100000100010100010100001001011001010100100100010011;
+		wintxt[2] = 68'b10000011110101010111100100010100010111101111011001010100100100010011;
+		wintxt[3] = 68'b10111010010101010100000100010010100100001010000001010100100100010000;
+		wintxt[4] = 68'b01101010010101010111100011100001000111101001011000101001110100010011;
 	end
 	
 	keyboard_tracker #(.PULSE_OR_HOLD(0)) keyboard(.clock(CLOCK_50), .reset(resetn),
