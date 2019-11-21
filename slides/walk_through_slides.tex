@@ -32,6 +32,30 @@
 
 \begin{frame}
     \frametitle{Implementation Details}
+    \framesubtitle{Structure of the project}
+    \begin{itemize}
+        \item \texttt{GOMOKU\_FPGA/adapters/*}
+        \begin{itemize}
+            \item Contains PS2 keyboard adapters, courtesy of Alex Hurka, link provided by professor on Quercus, under Project Proposal + Resources section. 
+            \item Contains VGA Adapters, borrowed from Lab 7 of CSC258.
+        \end{itemize}
+        \item \texttt{GOMOKU\_FPGA/DE1\_SoC.qsf}
+        \begin{itemize}
+            \item Required pin assignment file for the FPGA board, provided by professor on Quercus.
+        \end{itemize}
+        \item \texttt{GOMOKU\_FPGA/gomoku.v}
+        \begin{itemize}
+            \item Actual Implementation of the Gomoku Game, top level instantiation name is \texttt{gomoku}.
+        \end{itemize}
+        \item \texttt{GOMOKU\_FPGA/utils/*}
+        \begin{itemize}
+            \item Contains utility files, including the \texttt{bmp2mif} written in C provided and a jupyter notebook that we used to generate some AND gates used in our code. 
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Implementation Details}
     \framesubtitle{Input using the PS2 Keyboard}
     \begin{itemize}
         \item \texttt{a} for moving toward left by one position
