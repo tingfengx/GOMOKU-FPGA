@@ -1,0 +1,73 @@
+%%
+% !authored by https://tingfengx.github.io/
+%%
+\documentclass{beamer}
+\title{GOMOKU}
+\author{Lab 3165, Thursday Evenings @ Station 63/64}
+\institute{University of Toronto}
+\begin{document}
+\maketitle
+
+\newpage
+\begin{frame}
+\frametitle{Project Milestones}
+
+\begin{itemize}
+    \item Display the empty board on the screen through VGA cable. Go over the resources posted on quercus regarding keyboard control and then implement the keyboard control. Find resources for the while/black token and the game board.\newline
+    \item Users should be able to move the pointer around on the screen using the arrow keys on the keyboard. Users should also be able to put the token down (using the enter key on the keyboard) on any valid position on the game board. Notice that tokens have alternating color, meaning that if the last token put down was a white one the next one should be black. \newline
+    \item Check if the game has been won or not. If won, by which player. Display a message for who won the game. Make the hex display various game stats, including the current player identified by the player’s number.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Worth Mentioning Features}
+    \begin{itemize}
+        \item Support of keyboard control through the PS2 interface.
+        \item Moving cursor on the screen to indicate the current location of the cursor. No more looking at hex and counting on the grid!
+        \item Automatic alternating colour switching, avoids cheating in game.
+        \item Placing a stone at a already occupied location is forbidden.
+        \item Automatic judging of winner, more fair!
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Implementation Details}
+    \framesubtitle{Input using the PS2 Keyboard}
+    \begin{itemize}
+        \item \texttt{a} for moving toward left by one position
+        \item \texttt{s} for moving down by one position
+        \item \texttt{d} for moving right by one position
+        \item \texttt{w} for moving up by one position
+        \item \texttt{enter} for placing the stone at the position where the cursor is currently at.
+        
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Implementation Details}
+    \framesubtitle{Output Data on HEX and VGA display}
+    \begin{itemize}
+        \item \texttt{HEX0} for $y$ location on the grid, from 0 up to 6
+        \item \texttt{HEX1} for $x$ location on the grid, from 0 up to 6
+        \item \texttt{HEX4} is 1 if white won the game and zero otherwise
+        \item \texttt{HEX5} is 1 if black won the game and zero otherwise 
+        \item On the screen should be a 160 * 120 output of the grid with the current game state. 
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{}
+    \center \LARGE Time for a little demo!
+\end{frame}
+
+\begin{frame}
+    \frametitle{}
+    \center \LARGE Thank you
+\end{frame}
+
+
+
+
+
+\end{document}
