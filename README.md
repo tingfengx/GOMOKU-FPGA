@@ -4,13 +4,13 @@ Please refer to the walk through slides [here](https://github.com/tingfengx/GOMO
 
 ## Repository Road Map
 ``````
-GOMOKU-FPGA
-|gomoku.v
-|DE1_SoC.qsf
-|-utils
+GOMOKU-FPGA/
+|-gomoku.v
+|-DE1_SoC.qsf
+|-utils/
 |  |-bmp2mif
 |  |-andgates
-|-adapters
+|-adapters/
 |  |-Altera_UP_PS2_Command_Out.v
 |  |-Altera_UP_PS2_Data_In.v
 |  |-PS2_Controller.v
@@ -20,7 +20,7 @@ GOMOKU-FPGA
 |  |-vga_address_translator.v
 |  |-vga_controller.v
 |  |-vga_pll.v
-|-slides
+|-slides/
 |  |-walk_through_slides.tex
 |  |-walk_through_slides.pdf
 ``````
