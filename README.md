@@ -1,4 +1,7 @@
 # GOMOKU-FPGA
+
+Please refer to the walk through slides [here](https://github.com/tingfengx/GOMOKU-FPGA/blob/master/slides/walk_through_slides.pdf) for implementation details and output behavior.
+
 ## Repository Road Map
 ``````
 GOMOKU-FPGA
