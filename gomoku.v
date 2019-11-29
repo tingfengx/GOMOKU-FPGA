@@ -6,13 +6,15 @@ module gomoku(CLOCK_50, PS2_CLK, PS2_DAT, KEY, LEDR, HEX0, HEX1, HEX4, HEX5, VGA
 	 output [6:0] HEX0, HEX1, HEX4, HEX5;
 	 output VGA_CLK, VGA_HS, VGA_VS, VGA_BLANK_N, VGA_SYNC_N;
 	 output [9:0] VGA_R, VGA_G, VGA_B;
+	 reg [7:0] step;
 	 wire white_win;
 	 wire black_win;
 	 wire has_win;
 	 assign has_win = white_win || black_win; // 1 means has winner, // 0 means no winner yet.
 	 wire go;
 	 wire resetn;
-	 wire w, a, s, d, enter;
+	 reg has_begin;
+	 wire w, a, s, d, enter, space;
 	 reg writeEn;
 	 reg [2:0] vga_colour;
 	
@@ -24,6 +26,9 @@ module gomoku(CLOCK_50, PS2_CLK, PS2_DAT, KEY, LEDR, HEX0, HEX1, HEX4, HEX5, VGA
             black[j] <= 7'b0;
             white[j] <= 7'b0;
         end
+		  step <= 7'b0;
+		  has_begin <= 0;
+		  writeEn <= 0;
     end
 	
 	 reg [2:0] in_x = 3'd3;
@@ -33,7 +38,10 @@ module gomoku(CLOCK_50, PS2_CLK, PS2_DAT, KEY, LEDR, HEX0, HEX1, HEX4, HEX5, VGA
 	 reg [7:0] vga_x;
 	 reg [6:0] vga_y;
 	 assign resetn = KEY[0];
-
+	
+	 // winner of the game text
+	 reg [119:0] winner_txt [159:0];	 
+	 
     // empty board to be drawn each time
     reg [119:0] empty_board [159:0];
 	 
@@ -54,18 +62,26 @@ module gomoku(CLOCK_50, PS2_CLK, PS2_DAT, KEY, LEDR, HEX0, HEX1, HEX4, HEX5, VGA
                     empty_board[xcoord][ycoord] <= 1;
 					 else if ((ycoord <= 109 && ycoord >= 13) && (xcoord == 33 || xcoord == 49 || xcoord == 65 || xcoord == 81 || xcoord == 97 || xcoord == 113 || xcoord == 129))
 						  empty_board[xcoord][ycoord] <= 1;
-					 else
-                    empty_board[xcoord][ycoord] <= 0;
+					 else begin
+							empty_board[xcoord][ycoord] <= 0;
+					 end
 					 black_mask[xcoord][ycoord] <= 0;
 					 white_mask[xcoord][ycoord] <= 0;
 					 black_canvas[xcoord][ycoord] <= 0;
 					 white_canvas[xcoord][ycoord] <= 0;
+					 if (xcoord >= 2 && xcoord <= 8 && ycoord >= 3 && ycoord <= 9)
+						  winner_txt[xcoord][ycoord] <= 1;
+					 else
+						  winner_txt[xcoord][ycoord] <= 0;
             end
         end
     end
+	 
+	 
 	 keyboard_tracker #(.PULSE_OR_HOLD(0)) keyboard(.clock(CLOCK_50), .reset(resetn),
 																  .PS2_CLK(PS2_CLK), .PS2_DAT(PS2_DAT),
-																  .w(w), .a(a), .s(s), .d(d), .enter(enter));
+																  .w(w), .a(a), .s(s), .d(d), .enter(enter), 
+																  .space(space));
 
 
     vga_adapter VGA(.resetn(resetn), .clock(CLOCK_50),
@@ -74,54 +90,44 @@ module gomoku(CLOCK_50, PS2_CLK, PS2_DAT, KEY, LEDR, HEX0, HEX1, HEX4, HEX5, VGA
     defparam VGA.RESOLUTION = "160x120";
 	 defparam VGA.MONOCHROME = "FALSE";
 	 defparam VGA.BITS_PER_COLOUR_CHANNEL = 1;
-	 defparam VGA.BACKGROUND_IMAGE = "img/yellow.board.colour.mif";
-    
+	 defparam VGA.BACKGROUND_IMAGE = "img/board.colour.mif";
+    always@(negedge space)
+	 begin
+		  if (~has_begin)
+		      has_begin <= 1'b1;
+	 end
+	 
     always@(posedge CLOCK_50)
 	 begin
-		  writeEn <= 0;
-        if (~resetn) begin
-            vga_x <= 8'b0;
-            vga_y <= 7'b0;
-		  end
-        else begin
-				writeEn <= 1;
-            if (vga_x != 159 || vga_y != 119) begin
-					if (vga_x == 159) begin
-						vga_x <= 8'b0;
-						vga_y <= vga_y + 1;
-					end
-					else begin
-						vga_x <= vga_x + 1;
-					end
-				end
-            else begin
+		  if (has_begin) begin
+		      writeEn <= 0;
+				if (~resetn) begin
 					vga_x <= 8'b0;
 					vga_y <= 7'b0;
 				end
-			end
-   end
+				else begin
+					writeEn <= 1;
+					if (vga_x != 159 || vga_y != 119) begin
+						if (vga_x == 159) begin
+							vga_x <= 8'b0;
+							vga_y <= vga_y + 1;
+						end
+						else begin
+							vga_x <= vga_x + 1;
+						end
+					end
+					else begin
+						vga_x <= 8'b0;
+						vga_y <= 7'b0;
+					end
+				end
+		  end
+		  
+    end
 	
 	// go is the signal for placing the token
 	// embedded logic for checking if the position has been occupied or not.
 	assign go = (enter && ~white[in_x][in_y] && ~black[in_x][in_y] && ~has_win);
-	
-	//	always@(negedge resetn)
-	//	begin
-	//		for (xcoord = 0; xcoord <= 159; xcoord = xcoord + 1) begin
-	//			for (ycoord = 0; ycoord <= 119; ycoord = ycoord + 1) begin
-	//				 black_mask[xcoord][ycoord] <= 0;
-	//				 white_mask[xcoord][ycoord] <= 0;
-	//				 black_canvas[xcoord][ycoord] <= 0;
-	//				 white_canvas[xcoord][ycoord] <= 0;
-	//			end
-	//		end
-	//		for (xcoord = 0; xcoord <= 6; xcoord = xcoord + 1) begin
-	//			for (ycoord = 0; ycoord <= 6; ycoord = ycoord + 1) begin
-	//				black[xcoord][ycoord] <= 0;
-	//				white[xcoord][ycoord] <= 0;
-	//			end
-	//		end
-	//	end
 		
 	integer xc, yc; // x-coord and y-coord
 	always@(posedge CLOCK_50)
@@ -138,8 +144,6 @@ module gomoku(CLOCK_50, PS2_CLK, PS2_DAT, KEY, LEDR, HEX0, HEX1, HEX4, HEX5, VGA
 					white_canvas[xc][yc] <= 1;
 			end
 		end
-		
-	
 		if (empty_board[vga_x][vga_y] == 1'b0)
 			vga_colour <= 3'b110;
 		else
@@ -148,7 +152,12 @@ module gomoku(CLOCK_50, PS2_CLK, PS2_DAT, KEY, LEDR, HEX0, HEX1, HEX4, HEX5, VGA
 			vga_colour <= 3'b111;
 		else if (black_canvas[vga_x][vga_y] == 1'b1)
 			vga_colour <= 3'b000;
-			
+		if (winner_txt[vga_x][vga_y] == 1'b1 && has_win) begin
+			if (white_win)
+				vga_colour <= 3'b111;
+			if (black_win)
+				vga_colour <= 3'b000;
+		end
 		// red pointer this should be done last
 		if (vga_x == 33 + 16 * in_x && vga_y == 13 + 16 * in_y)
 			vga_colour <= 3'b100;
@@ -161,14 +170,15 @@ module gomoku(CLOCK_50, PS2_CLK, PS2_DAT, KEY, LEDR, HEX0, HEX1, HEX4, HEX5, VGA
 			white_mask[in_x * 16 + 33][in_y * 16 + 13] <= 1'b1;
 		end
 		else begin
+			step <= step + 8'b1;
 			black[in_x][in_y] <= 1'b1;
 			black_mask[in_x * 16 + 33][in_y * 16 + 13] <= 1'b1;
 		end
 		in_color <= !in_color;
 	end
 	
-	hex_decoder({3'b000, white_win}, HEX4);
-	hex_decoder({3'b000, black_win}, HEX5);
+	hex_decoder hex4(step[3:0], HEX4);
+	hex_decoder hex5(step[7:4], HEX5);
 	
 	
    // keyboard control
@@ -211,7 +221,7 @@ module gomoku(CLOCK_50, PS2_CLK, PS2_DAT, KEY, LEDR, HEX0, HEX1, HEX4, HEX5, VGA
 	 // ignore this
 	 
 	 wire neglect = empty_board[33][13];
-	 // hex_decoder hex3({3'b0, empty_board[33][13]}, HEX3);
+	 wire neglect1 = winner_txt[2][2];
 	 
 	wire [59:0] black_out_res;
 	

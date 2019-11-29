@@ -1,0 +1,10 @@
+
+
+//Mac/Home/Desktop/GOMOKU-FPGA/adapters/vga_pll.v
+
+Nov 28 05PM:56:14>: Error in CNX file format.
+
+Error messages are listed in file
+//Mac/Home/Desktop/GOMOKU-FPGA/adapters/vga_pll.cnxerr.
+
+Can't create the custom megafunction variation file(s)
