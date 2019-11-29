@@ -90,7 +90,7 @@ module gomoku(CLOCK_50, PS2_CLK, PS2_DAT, KEY, LEDR, HEX0, HEX1, HEX4, HEX5, VGA
     defparam VGA.RESOLUTION = "160x120";
 	 defparam VGA.MONOCHROME = "FALSE";
 	 defparam VGA.BITS_PER_COLOUR_CHANNEL = 1;
-	 defparam VGA.BACKGROUND_IMAGE = "img/board.colour.mif";
+	 defparam VGA.BACKGROUND_IMAGE = "img/image.colour.mif";
     always@(negedge space)
 	 begin
 		  if (~has_begin)
