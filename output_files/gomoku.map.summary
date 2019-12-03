@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Thu Nov 28 18:26:17 2019
+Analysis & Synthesis Status : Successful - Tue Dec 03 15:34:55 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : gomoku
 Top-level Entity Name : gomoku
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 478
-Total pins : 80
+Total registers : 488
+Total pins : 94
 Total virtual pins : 0
 Total block memory bits : 57,600
 Total DSP Blocks : 0

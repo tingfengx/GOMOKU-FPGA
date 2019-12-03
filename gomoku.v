@@ -1,9 +1,15 @@
-module gomoku(CLOCK_50, PS2_CLK, PS2_DAT, KEY, LEDR, HEX0, HEX1, HEX4, HEX5, VGA_CLK, VGA_HS, VGA_VS, VGA_BLANK_N, VGA_SYNC_N, VGA_R, VGA_G, VGA_B);
+module gomoku(CLOCK_50, 
+	PS2_CLK, PS2_DAT, KEY, LEDR, 
+	HEX0, HEX1, HEX2, HEX3, HEX4, 
+	HEX5, VGA_CLK, VGA_HS, VGA_VS, 
+	VGA_BLANK_N, VGA_SYNC_N, VGA_R,
+	VGA_G, VGA_B);
+	
 	 input CLOCK_50;
 	 inout PS2_CLK, PS2_DAT;
 	 input [3:0] KEY;
 	 output [9:0] LEDR;
-	 output [6:0] HEX0, HEX1, HEX4, HEX5;
+	 output [6:0] HEX0, HEX1, HEX2, HEX3, HEX4, HEX5;
 	 output VGA_CLK, VGA_HS, VGA_VS, VGA_BLANK_N, VGA_SYNC_N;
 	 output [9:0] VGA_R, VGA_G, VGA_B;
 	 reg [7:0] step;

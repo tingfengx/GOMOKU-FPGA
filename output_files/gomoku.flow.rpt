@@ -1,5 +1,5 @@
 Flow report for gomoku
-Thu Nov 28 19:04:06 2019
+Tue Dec 03 15:53:46 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,16 +40,16 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Thu Nov 28 19:03:55 2019       ;
+; Flow Status                     ; Successful - Tue Dec 03 15:53:46 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; gomoku                                      ;
 ; Top-level Entity Name           ; gomoku                                      ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 496 / 32,070 ( 2 % )                        ;
-; Total registers                 ; 486                                         ;
-; Total pins                      ; 80 / 457 ( 18 % )                           ;
+; Logic utilization (in ALMs)     ; 509 / 32,070 ( 2 % )                        ;
+; Total registers                 ; 491                                         ;
+; Total pins                      ; 94 / 457 ( 21 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 57,600 / 4,065,280 ( 1 % )                  ;
 ; Total DSP Blocks                ; 0 / 87 ( 0 % )                              ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/28/2019 18:25:02 ;
+; Start date & time ; 12/03/2019 15:32:54 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; gomoku              ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 121375707922.157498350207312           ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 121375707922.157540517402532           ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -93,11 +93,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:14     ; 1.0                     ; 5404 MB             ; 00:01:28                           ;
-; Fitter               ; 00:37:25     ; 1.0                     ; 7027 MB             ; 01:58:36                           ;
-; Assembler            ; 00:00:09     ; 1.0                     ; 4846 MB             ; 00:00:07                           ;
-; Timing Analyzer      ; 00:00:09     ; 1.6                     ; 5258 MB             ; 00:00:12                           ;
-; Total                ; 00:38:57     ; --                      ; --                  ; 02:00:23                           ;
+; Analysis & Synthesis ; 00:02:01     ; 1.0                     ; 5608 MB             ; 00:02:13                           ;
+; Fitter               ; 00:18:15     ; 1.0                     ; 7036 MB             ; 01:12:55                           ;
+; Assembler            ; 00:00:06     ; 1.0                     ; 4848 MB             ; 00:00:06                           ;
+; Timing Analyzer      ; 00:00:09     ; 1.7                     ; 5257 MB             ; 00:00:12                           ;
+; Total                ; 00:20:31     ; --                      ; --                  ; 01:15:26                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -120,6 +120,7 @@ quartus_map --read_settings_files=on --write_settings_files=off gomoku -c gomoku
 quartus_fit --read_settings_files=off --write_settings_files=off gomoku -c gomoku
 quartus_asm --read_settings_files=off --write_settings_files=off gomoku -c gomoku
 quartus_sta gomoku -c gomoku
+quartus_eda --read_settings_files=on --write_settings_files=off gomoku -c gomoku
 
 
 

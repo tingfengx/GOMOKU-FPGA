@@ -3,163 +3,179 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -4.819
-TNS   : -489.283
+Slack : -10.316
+TNS   : -652.796
 
 Type  : Slow 1100mV 85C Model Setup 'black[0][0]'
-Slack : -4.784
-TNS   : -823.009
+Slack : -6.341
+TNS   : -1199.223
 
 Type  : Slow 1100mV 85C Model Setup 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 34.144
+Slack : 34.494
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'black[0][0]'
-Slack : 0.042
-TNS   : 0.000
+Slack : -0.163
+TNS   : -1.082
 
 Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.363
+Slack : 0.221
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.421
+Slack : 0.412
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'black[0][0]'
-Slack : -2.332
-TNS   : -1462.073
+Slack : -3.375
+TNS   : -2347.434
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'keyboard_tracker:keyboard|space_press'
+Slack : -0.394
+TNS   : -0.519
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
 Slack : 1.666
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.876
+Slack : 8.878
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 18.778
+Slack : 18.767
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Setup 'black[0][0]'
-Slack : -4.624
-TNS   : -807.329
-
 Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -4.363
-TNS   : -442.889
+Slack : -9.811
+TNS   : -596.675
+
+Type  : Slow 1100mV 0C Model Setup 'black[0][0]'
+Slack : -6.035
+TNS   : -1141.410
 
 Type  : Slow 1100mV 0C Model Setup 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 34.445
+Slack : 34.591
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'black[0][0]'
-Slack : 0.158
+Slack : 0.018
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
-Slack : 0.367
+Slack : 0.208
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.393
+Slack : 0.390
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'black[0][0]'
-Slack : -2.248
-TNS   : -1440.968
+Slack : -3.220
+TNS   : -2265.573
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'keyboard_tracker:keyboard|space_press'
+Slack : -0.394
+TNS   : -0.509
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
 Slack : 1.666
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.836
+Slack : 8.833
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 18.763
+Slack : 18.760
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -2.953
-TNS   : -292.151
+Slack : -6.282
+TNS   : -389.068
 
 Type  : Fast 1100mV 85C Model Setup 'black[0][0]'
-Slack : -2.551
-TNS   : -427.375
+Slack : -3.612
+TNS   : -655.772
 
 Type  : Fast 1100mV 85C Model Setup 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 36.023
+Slack : 36.633
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'black[0][0]'
-Slack : -0.336
-TNS   : -13.040
+Slack : -0.412
+TNS   : -36.013
 
 Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.178
+Slack : 0.130
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.240
+Slack : 0.237
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'black[0][0]'
-Slack : -1.241
-TNS   : -613.021
+Slack : -1.848
+TNS   : -1095.865
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'keyboard_tracker:keyboard|space_press'
+Slack : 0.149
+TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
 Slack : 1.666
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.808
+Slack : 8.813
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 18.893
+Slack : 18.889
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -2.393
-TNS   : -234.573
+Slack : -5.401
+TNS   : -320.175
 
 Type  : Fast 1100mV 0C Model Setup 'black[0][0]'
-Slack : -2.236
-TNS   : -380.442
+Slack : -3.139
+TNS   : -574.077
 
 Type  : Fast 1100mV 0C Model Setup 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 36.541
+Slack : 36.971
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'black[0][0]'
-Slack : -0.191
-TNS   : -1.666
+Slack : -0.277
+TNS   : -14.464
 
 Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
-Slack : 0.169
+Slack : 0.119
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.214
+Slack : 0.209
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'black[0][0]'
-Slack : -1.073
-TNS   : -535.654
+Slack : -1.592
+TNS   : -954.111
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'keyboard_tracker:keyboard|space_press'
+Slack : 0.138
+TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
 Slack : 1.666
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.802
+Slack : 8.805
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 18.888
+Slack : 18.886
 TNS   : 0.000
 
 ------------------------------------------------------------

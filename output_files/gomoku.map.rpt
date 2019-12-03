@@ -1,5 +1,5 @@
 Analysis & Synthesis report for gomoku
-Thu Nov 28 18:26:17 2019
+Tue Dec 03 15:34:55 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -23,7 +23,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  15. General Register Statistics
  16. Inverted Register Statistics
  17. Multiplexer Restructuring Statistics (Restructuring Performed)
- 18. Source assignments for vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_pun1:auto_generated
+ 18. Source assignments for vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_a8n1:auto_generated
  19. Parameter Settings for User Entity Instance: keyboard_tracker:keyboard
  20. Parameter Settings for User Entity Instance: keyboard_tracker:keyboard|PS2_Controller:core_driver
  21. Parameter Settings for User Entity Instance: keyboard_tracker:keyboard|PS2_Controller:core_driver|Altera_UP_PS2_Command_Out:PS2_Command_Out
@@ -37,14 +37,12 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  29. altpll Parameter Settings by Entity Instance
  30. Port Connectivity Checks: "hex_decoder:hex1"
  31. Port Connectivity Checks: "hex_decoder:hex0"
- 32. Port Connectivity Checks: "hex_decoder:comb_870116"
- 33. Port Connectivity Checks: "hex_decoder:comb_870115"
- 34. Port Connectivity Checks: "keyboard_tracker:keyboard|PS2_Controller:core_driver"
- 35. Port Connectivity Checks: "keyboard_tracker:keyboard"
- 36. Post-Synthesis Netlist Statistics for Top Partition
- 37. Elapsed Time Per Partition
- 38. Analysis & Synthesis Messages
- 39. Analysis & Synthesis Suppressed Messages
+ 32. Port Connectivity Checks: "keyboard_tracker:keyboard|PS2_Controller:core_driver"
+ 33. Port Connectivity Checks: "keyboard_tracker:keyboard"
+ 34. Post-Synthesis Netlist Statistics for Top Partition
+ 35. Elapsed Time Per Partition
+ 36. Analysis & Synthesis Messages
+ 37. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -70,14 +68,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Nov 28 18:26:17 2019       ;
+; Analysis & Synthesis Status     ; Successful - Tue Dec 03 15:34:55 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; gomoku                                      ;
 ; Top-level Entity Name           ; gomoku                                      ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 478                                         ;
-; Total pins                      ; 80                                          ;
+; Total registers                 ; 488                                         ;
+; Total pins                      ; 94                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 57,600                                      ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -200,39 +198,40 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                         ;
-+--------------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path     ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                 ; Library ;
-+--------------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
-; adapters/Altera_UP_PS2_Command_Out.v ; yes             ; User Verilog HDL File        ; //Mac/Home/Desktop/GOMOKU-FPGA/adapters/Altera_UP_PS2_Command_Out.v          ;         ;
-; adapters/Altera_UP_PS2_Data_In.v     ; yes             ; User Verilog HDL File        ; //Mac/Home/Desktop/GOMOKU-FPGA/adapters/Altera_UP_PS2_Data_In.v              ;         ;
-; adapters/PS2_Controller.v            ; yes             ; User Verilog HDL File        ; //Mac/Home/Desktop/GOMOKU-FPGA/adapters/PS2_Controller.v                     ;         ;
-; adapters/PS2_Keyboard_Controller.v   ; yes             ; User Verilog HDL File        ; //Mac/Home/Desktop/GOMOKU-FPGA/adapters/PS2_Keyboard_Controller.v            ;         ;
-; adapters/vga_adapter.v               ; yes             ; User Verilog HDL File        ; //Mac/Home/Desktop/GOMOKU-FPGA/adapters/vga_adapter.v                        ;         ;
-; adapters/vga_address_translator.v    ; yes             ; User Verilog HDL File        ; //Mac/Home/Desktop/GOMOKU-FPGA/adapters/vga_address_translator.v             ;         ;
-; adapters/vga_controller.v            ; yes             ; User Verilog HDL File        ; //Mac/Home/Desktop/GOMOKU-FPGA/adapters/vga_controller.v                     ;         ;
-; adapters/vga_pll.v                   ; yes             ; User Wizard-Generated File   ; //Mac/Home/Desktop/GOMOKU-FPGA/adapters/vga_pll.v                            ;         ;
-; gomoku.v                             ; yes             ; Auto-Found Verilog HDL File  ; //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v                                      ;         ;
-; altsyncram.tdf                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
-; stratix_ram_block.inc                ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
-; lpm_mux.inc                          ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
-; lpm_decode.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
-; aglobal181.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc        ;         ;
-; a_rdenreg.inc                        ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
-; altrom.inc                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
-; altram.inc                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc            ;         ;
-; altdpram.inc                         ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_pun1.tdf               ; yes             ; Auto-Generated Megafunction  ; //Mac/Home/Desktop/GOMOKU-FPGA/db/altsyncram_pun1.tdf                        ;         ;
-; db/decode_7la.tdf                    ; yes             ; Auto-Generated Megafunction  ; //Mac/Home/Desktop/GOMOKU-FPGA/db/decode_7la.tdf                             ;         ;
-; db/decode_01a.tdf                    ; yes             ; Auto-Generated Megafunction  ; //Mac/Home/Desktop/GOMOKU-FPGA/db/decode_01a.tdf                             ;         ;
-; db/mux_ifb.tdf                       ; yes             ; Auto-Generated Megafunction  ; //Mac/Home/Desktop/GOMOKU-FPGA/db/mux_ifb.tdf                                ;         ;
-; altpll.tdf                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf            ;         ;
-; stratix_pll.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_pll.inc       ;         ;
-; stratixii_pll.inc                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratixii_pll.inc     ;         ;
-; cycloneii_pll.inc                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/cycloneii_pll.inc     ;         ;
-; db/altpll_80u.tdf                    ; yes             ; Auto-Generated Megafunction  ; //Mac/Home/Desktop/GOMOKU-FPGA/db/altpll_80u.tdf                             ;         ;
-+--------------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                   ;
++--------------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path     ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                 ; Library ;
++--------------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
+; adapters/Altera_UP_PS2_Command_Out.v ; yes             ; User Verilog HDL File                  ; //Mac/Home/Desktop/GOMOKU-FPGA/adapters/Altera_UP_PS2_Command_Out.v          ;         ;
+; adapters/Altera_UP_PS2_Data_In.v     ; yes             ; User Verilog HDL File                  ; //Mac/Home/Desktop/GOMOKU-FPGA/adapters/Altera_UP_PS2_Data_In.v              ;         ;
+; adapters/PS2_Controller.v            ; yes             ; User Verilog HDL File                  ; //Mac/Home/Desktop/GOMOKU-FPGA/adapters/PS2_Controller.v                     ;         ;
+; adapters/PS2_Keyboard_Controller.v   ; yes             ; User Verilog HDL File                  ; //Mac/Home/Desktop/GOMOKU-FPGA/adapters/PS2_Keyboard_Controller.v            ;         ;
+; adapters/vga_adapter.v               ; yes             ; User Verilog HDL File                  ; //Mac/Home/Desktop/GOMOKU-FPGA/adapters/vga_adapter.v                        ;         ;
+; adapters/vga_address_translator.v    ; yes             ; User Verilog HDL File                  ; //Mac/Home/Desktop/GOMOKU-FPGA/adapters/vga_address_translator.v             ;         ;
+; adapters/vga_controller.v            ; yes             ; User Verilog HDL File                  ; //Mac/Home/Desktop/GOMOKU-FPGA/adapters/vga_controller.v                     ;         ;
+; adapters/vga_pll.v                   ; yes             ; User Wizard-Generated File             ; //Mac/Home/Desktop/GOMOKU-FPGA/adapters/vga_pll.v                            ;         ;
+; gomoku.v                             ; yes             ; Auto-Found Verilog HDL File            ; //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v                                      ;         ;
+; altsyncram.tdf                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc                ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                          ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal181.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc        ;         ;
+; a_rdenreg.inc                        ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                           ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                           ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                         ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_a8n1.tdf               ; yes             ; Auto-Generated Megafunction            ; //Mac/Home/Desktop/GOMOKU-FPGA/db/altsyncram_a8n1.tdf                        ;         ;
+; img/image.colour.mif                 ; yes             ; Auto-Found Memory Initialization File  ; //Mac/Home/Desktop/GOMOKU-FPGA/img/image.colour.mif                          ;         ;
+; db/decode_7la.tdf                    ; yes             ; Auto-Generated Megafunction            ; //Mac/Home/Desktop/GOMOKU-FPGA/db/decode_7la.tdf                             ;         ;
+; db/decode_01a.tdf                    ; yes             ; Auto-Generated Megafunction            ; //Mac/Home/Desktop/GOMOKU-FPGA/db/decode_01a.tdf                             ;         ;
+; db/mux_ifb.tdf                       ; yes             ; Auto-Generated Megafunction            ; //Mac/Home/Desktop/GOMOKU-FPGA/db/mux_ifb.tdf                                ;         ;
+; altpll.tdf                           ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf            ;         ;
+; stratix_pll.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_pll.inc       ;         ;
+; stratixii_pll.inc                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratixii_pll.inc     ;         ;
+; cycloneii_pll.inc                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/cycloneii_pll.inc     ;         ;
+; db/altpll_80u.tdf                    ; yes             ; Auto-Generated Megafunction            ; //Mac/Home/Desktop/GOMOKU-FPGA/db/altpll_80u.tdf                             ;         ;
++--------------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -240,18 +239,18 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 542            ;
+; Estimate of Logic utilization (ALMs needed) ; 551            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 857            ;
-;     -- 7 input functions                    ; 16             ;
-;     -- 6 input functions                    ; 185            ;
-;     -- 5 input functions                    ; 137            ;
-;     -- 4 input functions                    ; 123            ;
-;     -- <=3 input functions                  ; 396            ;
+; Combinational ALUT usage for logic          ; 899            ;
+;     -- 7 input functions                    ; 10             ;
+;     -- 6 input functions                    ; 168            ;
+;     -- 5 input functions                    ; 163            ;
+;     -- 4 input functions                    ; 152            ;
+;     -- <=3 input functions                  ; 406            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 478            ;
+; Dedicated logic registers                   ; 488            ;
 ;                                             ;                ;
-; I/O pins                                    ; 80             ;
+; I/O pins                                    ; 94             ;
 ; Total MLAB memory bits                      ; 0              ;
 ; Total block memory bits                     ; 57600          ;
 ;                                             ;                ;
@@ -261,9 +260,9 @@ refer to the applicable agreement for further details.
 ;     -- PLLs                                 ; 1              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 247            ;
-; Total fan-out                               ; 4985           ;
-; Average fan-out                             ; 3.31           ;
+; Maximum fan-out                             ; 248            ;
+; Total fan-out                               ; 5175           ;
+; Average fan-out                             ; 3.26           ;
 +---------------------------------------------+----------------+
 
 
@@ -272,19 +271,21 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------+---------------------------+--------------+
 ; Compilation Hierarchy Node                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                    ; Entity Name               ; Library Name ;
 +---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------+---------------------------+--------------+
-; |gomoku                                                 ; 857 (654)           ; 478 (352)                 ; 57600             ; 0          ; 80   ; 0            ; |gomoku                                                                                                ; gomoku                    ; work         ;
+; |gomoku                                                 ; 899 (680)           ; 488 (361)                 ; 57600             ; 0          ; 94   ; 0            ; |gomoku                                                                                                ; gomoku                    ; work         ;
 ;    |hex_decoder:hex0|                                   ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |gomoku|hex_decoder:hex0                                                                               ; hex_decoder               ; work         ;
 ;    |hex_decoder:hex1|                                   ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |gomoku|hex_decoder:hex1                                                                               ; hex_decoder               ; work         ;
-;    |keyboard_tracker:keyboard|                          ; 119 (13)            ; 96 (6)                    ; 0                 ; 0          ; 0    ; 0            ; |gomoku|keyboard_tracker:keyboard                                                                      ; keyboard_tracker          ; work         ;
-;       |PS2_Controller:core_driver|                      ; 106 (6)             ; 90 (5)                    ; 0                 ; 0          ; 0    ; 0            ; |gomoku|keyboard_tracker:keyboard|PS2_Controller:core_driver                                           ; PS2_Controller            ; work         ;
+;    |hex_decoder:hex4|                                   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |gomoku|hex_decoder:hex4                                                                               ; hex_decoder               ; work         ;
+;    |hex_decoder:hex5|                                   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |gomoku|hex_decoder:hex5                                                                               ; hex_decoder               ; work         ;
+;    |keyboard_tracker:keyboard|                          ; 121 (13)            ; 97 (7)                    ; 0                 ; 0          ; 0    ; 0            ; |gomoku|keyboard_tracker:keyboard                                                                      ; keyboard_tracker          ; work         ;
+;       |PS2_Controller:core_driver|                      ; 108 (6)             ; 90 (5)                    ; 0                 ; 0          ; 0    ; 0            ; |gomoku|keyboard_tracker:keyboard|PS2_Controller:core_driver                                           ; PS2_Controller            ; work         ;
 ;          |Altera_UP_PS2_Command_Out:PS2_Command_Out|    ; 86 (86)             ; 60 (60)                   ; 0                 ; 0          ; 0    ; 0            ; |gomoku|keyboard_tracker:keyboard|PS2_Controller:core_driver|Altera_UP_PS2_Command_Out:PS2_Command_Out ; Altera_UP_PS2_Command_Out ; work         ;
-;          |Altera_UP_PS2_Data_In:PS2_Data_In|            ; 14 (14)             ; 25 (25)                   ; 0                 ; 0          ; 0    ; 0            ; |gomoku|keyboard_tracker:keyboard|PS2_Controller:core_driver|Altera_UP_PS2_Data_In:PS2_Data_In         ; Altera_UP_PS2_Data_In     ; work         ;
+;          |Altera_UP_PS2_Data_In:PS2_Data_In|            ; 16 (16)             ; 25 (25)                   ; 0                 ; 0          ; 0    ; 0            ; |gomoku|keyboard_tracker:keyboard|PS2_Controller:core_driver|Altera_UP_PS2_Data_In:PS2_Data_In         ; Altera_UP_PS2_Data_In     ; work         ;
 ;    |vga_adapter:VGA|                                    ; 65 (2)              ; 30 (0)                    ; 57600             ; 0          ; 0    ; 0            ; |gomoku|vga_adapter:VGA                                                                                ; vga_adapter               ; work         ;
 ;       |altsyncram:VideoMemory|                          ; 9 (0)               ; 4 (0)                     ; 57600             ; 0          ; 0    ; 0            ; |gomoku|vga_adapter:VGA|altsyncram:VideoMemory                                                         ; altsyncram                ; work         ;
-;          |altsyncram_pun1:auto_generated|               ; 9 (0)               ; 4 (4)                     ; 57600             ; 0          ; 0    ; 0            ; |gomoku|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_pun1:auto_generated                          ; altsyncram_pun1           ; work         ;
-;             |decode_01a:rden_decode_b|                  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |gomoku|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_pun1:auto_generated|decode_01a:rden_decode_b ; decode_01a                ; work         ;
-;             |decode_7la:decode2|                        ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |gomoku|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_pun1:auto_generated|decode_7la:decode2       ; decode_7la                ; work         ;
-;             |mux_ifb:mux3|                              ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |gomoku|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_pun1:auto_generated|mux_ifb:mux3             ; mux_ifb                   ; work         ;
+;          |altsyncram_a8n1:auto_generated|               ; 9 (0)               ; 4 (4)                     ; 57600             ; 0          ; 0    ; 0            ; |gomoku|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_a8n1:auto_generated                          ; altsyncram_a8n1           ; work         ;
+;             |decode_01a:rden_decode_b|                  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |gomoku|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_a8n1:auto_generated|decode_01a:rden_decode_b ; decode_01a                ; work         ;
+;             |decode_7la:decode2|                        ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |gomoku|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_a8n1:auto_generated|decode_7la:decode2       ; decode_7la                ; work         ;
+;             |mux_ifb:mux3|                              ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |gomoku|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_a8n1:auto_generated|mux_ifb:mux3             ; mux_ifb                   ; work         ;
 ;       |vga_address_translator:user_input_translator|    ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |gomoku|vga_adapter:VGA|vga_address_translator:user_input_translator                                   ; vga_address_translator    ; work         ;
 ;       |vga_controller:controller|                       ; 42 (32)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |gomoku|vga_adapter:VGA|vga_controller:controller                                                      ; vga_controller            ; work         ;
 ;          |vga_address_translator:controller_translator| ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |gomoku|vga_adapter:VGA|vga_controller:controller|vga_address_translator:controller_translator         ; vga_address_translator    ; work         ;
@@ -295,13 +296,13 @@ refer to the applicable agreement for further details.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                      ;
-+----------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
-; Name                                                                             ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF  ;
-+----------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
-; vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_pun1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 19200        ; 3            ; 19200        ; 3            ; 57600 ; None ;
-+----------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                      ;
++----------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+----------------------+
+; Name                                                                             ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                  ;
++----------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+----------------------+
+; vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_a8n1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 19200        ; 3            ; 19200        ; 3            ; 57600 ; img/image.colour.mif ;
++----------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+----------------------+
 
 
 Encoding Type:  One-Hot
@@ -5429,12 +5430,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 478   ;
-; Number of registers using Synchronous Clear  ; 111   ;
+; Total registers                              ; 488   ;
+; Number of registers using Synchronous Clear  ; 119   ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 20    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 284   ;
+; Number of registers using Clock Enable       ; 307   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -5457,19 +5458,19 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |gomoku|keyboard_tracker:keyboard|PS2_Controller:core_driver|Altera_UP_PS2_Data_In:PS2_Data_In|received_data[7]                    ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |gomoku|keyboard_tracker:keyboard|PS2_Controller:core_driver|Altera_UP_PS2_Data_In:PS2_Data_In|data_shift_reg[2]                   ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |gomoku|vga_adapter:VGA|vga_controller:controller|yCounter[8]                                                                      ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |gomoku|vga_y[5]                                                                                                                   ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |gomoku|vga_x[5]                                                                                                                   ;
-; 4:1                ; 13 bits   ; 26 LEs        ; 0 LEs                ; 26 LEs                 ; Yes        ; |gomoku|keyboard_tracker:keyboard|PS2_Controller:core_driver|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_initiate_counter[9] ;
-; 4:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |gomoku|keyboard_tracker:keyboard|PS2_Controller:core_driver|Altera_UP_PS2_Command_Out:PS2_Command_Out|waiting_counter[9]          ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |gomoku|keyboard_tracker:keyboard|PS2_Controller:core_driver|Altera_UP_PS2_Command_Out:PS2_Command_Out|cur_bit[3]                  ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |gomoku|keyboard_tracker:keyboard|PS2_Controller:core_driver|Altera_UP_PS2_Data_In:PS2_Data_In|data_count[2]                       ;
-; 4:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |gomoku|keyboard_tracker:keyboard|PS2_Controller:core_driver|Altera_UP_PS2_Command_Out:PS2_Command_Out|transfer_counter[10]        ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |gomoku|in_y[0]                                                                                                                    ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |gomoku|in_x[0]                                                                                                                    ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |gomoku|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_pun1:auto_generated|mux_ifb:mux3|result_node[0]                          ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |gomoku|keyboard_tracker:keyboard|PS2_Controller:core_driver|Altera_UP_PS2_Data_In:PS2_Data_In|received_data[4]                    ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |gomoku|keyboard_tracker:keyboard|PS2_Controller:core_driver|Altera_UP_PS2_Data_In:PS2_Data_In|data_shift_reg[4]                   ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |gomoku|vga_adapter:VGA|vga_controller:controller|yCounter[9]                                                                      ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |gomoku|vga_y[4]                                                                                                                   ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |gomoku|vga_x[7]                                                                                                                   ;
+; 4:1                ; 13 bits   ; 26 LEs        ; 0 LEs                ; 26 LEs                 ; Yes        ; |gomoku|keyboard_tracker:keyboard|PS2_Controller:core_driver|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_initiate_counter[8] ;
+; 4:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |gomoku|keyboard_tracker:keyboard|PS2_Controller:core_driver|Altera_UP_PS2_Command_Out:PS2_Command_Out|waiting_counter[14]         ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |gomoku|keyboard_tracker:keyboard|PS2_Controller:core_driver|Altera_UP_PS2_Command_Out:PS2_Command_Out|cur_bit[0]                  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |gomoku|keyboard_tracker:keyboard|PS2_Controller:core_driver|Altera_UP_PS2_Data_In:PS2_Data_In|data_count[0]                       ;
+; 4:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |gomoku|keyboard_tracker:keyboard|PS2_Controller:core_driver|Altera_UP_PS2_Command_Out:PS2_Command_Out|transfer_counter[17]        ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |gomoku|in_y[1]                                                                                                                    ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |gomoku|in_x[1]                                                                                                                    ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |gomoku|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_a8n1:auto_generated|mux_ifb:mux3|result_node[2]                          ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |gomoku|keyboard_tracker:keyboard|curr_state                                                                                       ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |gomoku|keyboard_tracker:keyboard|curr_state                                                                                       ;
 ; 18004:1            ; 2 bits    ; 24004 LEs     ; 7692 LEs             ; 16312 LEs              ; No         ; |gomoku|Mux321                                                                                                                     ;
@@ -5477,7 +5478,7 @@ Encoding Type:  One-Hot
 
 
 +----------------------------------------------------------------------------------------------+
-; Source assignments for vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_pun1:auto_generated ;
+; Source assignments for vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_a8n1:auto_generated ;
 +---------------------------------+--------------------+------+--------------------------------+
 ; Assignment                      ; Value              ; From ; To                             ;
 +---------------------------------+--------------------+------+--------------------------------+
@@ -5531,16 +5532,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: vga_adapter:VGA           ;
-+-------------------------+-----------------------------+----------------+
-; Parameter Name          ; Value                       ; Type           ;
-+-------------------------+-----------------------------+----------------+
-; BITS_PER_COLOUR_CHANNEL ; 1                           ; Signed Integer ;
-; MONOCHROME              ; FALSE                       ; String         ;
-; RESOLUTION              ; 160x120                     ; String         ;
-; BACKGROUND_IMAGE        ; img/yellow.board.colour.mif ; String         ;
-+-------------------------+-----------------------------+----------------+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: vga_adapter:VGA    ;
++-------------------------+----------------------+----------------+
+; Parameter Name          ; Value                ; Type           ;
++-------------------------+----------------------+----------------+
+; BITS_PER_COLOUR_CHANNEL ; 1                    ; Signed Integer ;
+; MONOCHROME              ; FALSE                ; String         ;
+; RESOLUTION              ; 160x120              ; String         ;
+; BACKGROUND_IMAGE        ; img/image.colour.mif ; String         ;
++-------------------------+----------------------+----------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -5556,62 +5557,62 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +-------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: vga_adapter:VGA|altsyncram:VideoMemory ;
-+------------------------------------+-----------------------------+------------------+
-; Parameter Name                     ; Value                       ; Type             ;
-+------------------------------------+-----------------------------+------------------+
-; BYTE_SIZE_BLOCK                    ; 8                           ; Untyped          ;
-; AUTO_CARRY_CHAINS                  ; ON                          ; AUTO_CARRY       ;
-; IGNORE_CARRY_BUFFERS               ; OFF                         ; IGNORE_CARRY     ;
-; AUTO_CASCADE_CHAINS                ; ON                          ; AUTO_CASCADE     ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                         ; IGNORE_CASCADE   ;
-; WIDTH_BYTEENA                      ; 1                           ; Untyped          ;
-; OPERATION_MODE                     ; DUAL_PORT                   ; Untyped          ;
-; WIDTH_A                            ; 3                           ; Signed Integer   ;
-; WIDTHAD_A                          ; 15                          ; Signed Integer   ;
-; NUMWORDS_A                         ; 19200                       ; Signed Integer   ;
-; OUTDATA_REG_A                      ; UNREGISTERED                ; Untyped          ;
-; ADDRESS_ACLR_A                     ; NONE                        ; Untyped          ;
-; OUTDATA_ACLR_A                     ; NONE                        ; Untyped          ;
-; WRCONTROL_ACLR_A                   ; NONE                        ; Untyped          ;
-; INDATA_ACLR_A                      ; NONE                        ; Untyped          ;
-; BYTEENA_ACLR_A                     ; NONE                        ; Untyped          ;
-; WIDTH_B                            ; 3                           ; Signed Integer   ;
-; WIDTHAD_B                          ; 15                          ; Signed Integer   ;
-; NUMWORDS_B                         ; 19200                       ; Signed Integer   ;
-; INDATA_REG_B                       ; CLOCK1                      ; Untyped          ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                      ; Untyped          ;
-; RDCONTROL_REG_B                    ; CLOCK1                      ; Untyped          ;
-; ADDRESS_REG_B                      ; CLOCK1                      ; Untyped          ;
-; OUTDATA_REG_B                      ; CLOCK1                      ; Untyped          ;
-; BYTEENA_REG_B                      ; CLOCK1                      ; Untyped          ;
-; INDATA_ACLR_B                      ; NONE                        ; Untyped          ;
-; WRCONTROL_ACLR_B                   ; NONE                        ; Untyped          ;
-; ADDRESS_ACLR_B                     ; NONE                        ; Untyped          ;
-; OUTDATA_ACLR_B                     ; NONE                        ; Untyped          ;
-; RDCONTROL_ACLR_B                   ; NONE                        ; Untyped          ;
-; BYTEENA_ACLR_B                     ; NONE                        ; Untyped          ;
-; WIDTH_BYTEENA_A                    ; 1                           ; Untyped          ;
-; WIDTH_BYTEENA_B                    ; 1                           ; Untyped          ;
-; RAM_BLOCK_TYPE                     ; AUTO                        ; Untyped          ;
-; BYTE_SIZE                          ; 8                           ; Untyped          ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                   ; Untyped          ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ        ; Untyped          ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ        ; Untyped          ;
-; INIT_FILE                          ; img/yellow.board.colour.mif ; Untyped          ;
-; INIT_FILE_LAYOUT                   ; PORT_A                      ; Untyped          ;
-; MAXIMUM_DEPTH                      ; 0                           ; Untyped          ;
-; CLOCK_ENABLE_INPUT_A               ; BYPASS                      ; Untyped          ;
-; CLOCK_ENABLE_INPUT_B               ; BYPASS                      ; Untyped          ;
-; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                      ; Untyped          ;
-; CLOCK_ENABLE_OUTPUT_B              ; BYPASS                      ; Untyped          ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN             ; Untyped          ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN             ; Untyped          ;
-; ENABLE_ECC                         ; FALSE                       ; Untyped          ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                       ; Untyped          ;
-; WIDTH_ECCSTATUS                    ; 3                           ; Untyped          ;
-; DEVICE_FAMILY                      ; Cyclone V                   ; Untyped          ;
-; CBXI_PARAMETER                     ; altsyncram_pun1             ; Untyped          ;
-+------------------------------------+-----------------------------+------------------+
++------------------------------------+----------------------+-------------------------+
+; Parameter Name                     ; Value                ; Type                    ;
++------------------------------------+----------------------+-------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                 ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY              ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY            ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE            ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE          ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                 ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                 ;
+; WIDTH_A                            ; 3                    ; Signed Integer          ;
+; WIDTHAD_A                          ; 15                   ; Signed Integer          ;
+; NUMWORDS_A                         ; 19200                ; Signed Integer          ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                 ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                 ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                 ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                 ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                 ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                 ;
+; WIDTH_B                            ; 3                    ; Signed Integer          ;
+; WIDTHAD_B                          ; 15                   ; Signed Integer          ;
+; NUMWORDS_B                         ; 19200                ; Signed Integer          ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                 ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                 ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                 ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                 ;
+; OUTDATA_REG_B                      ; CLOCK1               ; Untyped                 ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                 ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                 ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                 ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                 ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                 ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                 ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                 ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                 ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                 ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                 ;
+; BYTE_SIZE                          ; 8                    ; Untyped                 ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                 ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                 ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                 ;
+; INIT_FILE                          ; img/image.colour.mif ; Untyped                 ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                 ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                 ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                 ;
+; CLOCK_ENABLE_INPUT_B               ; BYPASS               ; Untyped                 ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                 ;
+; CLOCK_ENABLE_OUTPUT_B              ; BYPASS               ; Untyped                 ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                 ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                 ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                 ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                 ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                 ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                 ;
+; CBXI_PARAMETER                     ; altsyncram_a8n1      ; Untyped                 ;
++------------------------------------+----------------------+-------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -6074,24 +6075,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------+-------+----------+--------------+
 
 
-+-----------------------------------------------------+
-; Port Connectivity Checks: "hex_decoder:comb_870116" ;
-+-----------------+-------+----------+----------------+
-; Port            ; Type  ; Severity ; Details        ;
-+-----------------+-------+----------+----------------+
-; hex_digit[3..1] ; Input ; Info     ; Stuck at GND   ;
-+-----------------+-------+----------+----------------+
-
-
-+-----------------------------------------------------+
-; Port Connectivity Checks: "hex_decoder:comb_870115" ;
-+-----------------+-------+----------+----------------+
-; Port            ; Type  ; Severity ; Details        ;
-+-----------------+-------+----------+----------------+
-; hex_digit[3..1] ; Input ; Info     ; Stuck at GND   ;
-+-----------------+-------+----------+----------------+
-
-
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "keyboard_tracker:keyboard|PS2_Controller:core_driver"                                                                                                                 ;
 +-------------------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -6113,7 +6096,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; right ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
 ; up    ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
 ; down  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-; space ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
 +-------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
@@ -6122,43 +6104,43 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 478                         ;
+; arriav_ff             ; 488                         ;
 ;     CLR SCLR          ; 10                          ;
-;     ENA               ; 208                         ;
+;     ENA               ; 216                         ;
 ;     ENA CLR SCLR      ; 10                          ;
-;     ENA SCLR          ; 66                          ;
-;     SCLR              ; 25                          ;
-;     plain             ; 159                         ;
+;     ENA SCLR          ; 81                          ;
+;     SCLR              ; 18                          ;
+;     plain             ; 153                         ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 859                         ;
-;     arith             ; 95                          ;
+; arriav_lcell_comb     ; 903                         ;
+;     arith             ; 102                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 86                          ;
-;         2 data inputs ; 2                           ;
+;         1 data inputs ; 92                          ;
+;         2 data inputs ; 3                           ;
 ;         3 data inputs ; 1                           ;
 ;         4 data inputs ; 2                           ;
 ;         5 data inputs ; 3                           ;
-;     extend            ; 16                          ;
-;         7 data inputs ; 16                          ;
-;     normal            ; 738                         ;
+;     extend            ; 10                          ;
+;         7 data inputs ; 10                          ;
+;     normal            ; 781                         ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 94                          ;
-;         3 data inputs ; 200                         ;
-;         4 data inputs ; 121                         ;
-;         5 data inputs ; 134                         ;
-;         6 data inputs ; 185                         ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 97                          ;
+;         3 data inputs ; 199                         ;
+;         4 data inputs ; 150                         ;
+;         5 data inputs ; 160                         ;
+;         6 data inputs ; 168                         ;
 ;     shared            ; 10                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 2                           ;
 ;         2 data inputs ; 6                           ;
 ;         3 data inputs ; 1                           ;
-; boundary_port         ; 80                          ;
+; boundary_port         ; 94                          ;
 ; generic_pll           ; 1                           ;
 ; stratixv_ram_block    ; 9                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 3.59                        ;
+; Max LUT depth         ; 9.00                        ;
+; Average LUT depth     ; 3.84                        ;
 +-----------------------+-----------------------------+
 
 
@@ -6167,7 +6149,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:52     ;
+; Top            ; 00:00:54     ;
 +----------------+--------------+
 
 
@@ -6177,7 +6159,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Nov 28 18:25:01 2019
+    Info: Processing started: Tue Dec 03 15:32:53 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off gomoku -c gomoku
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -6201,19 +6183,20 @@ Info (12021): Found 1 design units, including 1 entities, in source file adapter
     Info (12023): Found entity 1: vga_pll File: //Mac/Home/Desktop/GOMOKU-FPGA/adapters/vga_pll.v Line: 36
 Warning (12125): Using design file gomoku.v, which is not specified as a design file for the current project, but contains definitions for 2 design units and 2 entities in project
     Info (12023): Found entity 1: gomoku File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 1
-    Info (12023): Found entity 2: hex_decoder File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 375
-Critical Warning (10846): Verilog HDL Instantiation warning at gomoku.v(170): instance has no name File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 170
-Critical Warning (10846): Verilog HDL Instantiation warning at gomoku.v(171): instance has no name File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 171
+    Info (12023): Found entity 2: hex_decoder File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 391
 Info (12127): Elaborating entity "gomoku" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at gomoku.v(213): object "neglect" assigned a value but never read File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 213
-Warning (10230): Verilog HDL assignment warning at gomoku.v(91): truncated value with size 32 to match size of target (7) File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 91
-Warning (10230): Verilog HDL assignment warning at gomoku.v(94): truncated value with size 32 to match size of target (8) File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 94
-Warning (10034): Output port "LEDR" at gomoku.v(5) has no driver File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 5
-Info (12128): Elaborating entity "keyboard_tracker" for hierarchy "keyboard_tracker:keyboard" File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 68
+Warning (10036): Verilog HDL or VHDL warning at gomoku.v(229): object "neglect" assigned a value but never read File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 229
+Warning (10036): Verilog HDL or VHDL warning at gomoku.v(230): object "neglect1" assigned a value but never read File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 230
+Warning (10230): Verilog HDL assignment warning at gomoku.v(119): truncated value with size 32 to match size of target (7) File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 119
+Warning (10230): Verilog HDL assignment warning at gomoku.v(122): truncated value with size 32 to match size of target (8) File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 122
+Warning (10034): Output port "LEDR" at gomoku.v(11) has no driver File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 11
+Warning (10034): Output port "HEX2" at gomoku.v(12) has no driver File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 12
+Warning (10034): Output port "HEX3" at gomoku.v(12) has no driver File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 12
+Info (12128): Elaborating entity "keyboard_tracker" for hierarchy "keyboard_tracker:keyboard" File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 90
 Info (12128): Elaborating entity "PS2_Controller" for hierarchy "keyboard_tracker:keyboard|PS2_Controller:core_driver" File: //Mac/Home/Desktop/GOMOKU-FPGA/adapters/PS2_Keyboard_Controller.v Line: 197
 Info (12128): Elaborating entity "Altera_UP_PS2_Data_In" for hierarchy "keyboard_tracker:keyboard|PS2_Controller:core_driver|Altera_UP_PS2_Data_In:PS2_Data_In" File: //Mac/Home/Desktop/GOMOKU-FPGA/adapters/PS2_Controller.v Line: 246
 Info (12128): Elaborating entity "Altera_UP_PS2_Command_Out" for hierarchy "keyboard_tracker:keyboard|PS2_Controller:core_driver|Altera_UP_PS2_Command_Out:PS2_Command_Out" File: //Mac/Home/Desktop/GOMOKU-FPGA/adapters/PS2_Controller.v Line: 266
-Info (12128): Elaborating entity "vga_adapter" for hierarchy "vga_adapter:VGA" File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 73
+Info (12128): Elaborating entity "vga_adapter" for hierarchy "vga_adapter:VGA" File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 95
 Info (12128): Elaborating entity "vga_address_translator" for hierarchy "vga_adapter:VGA|vga_address_translator:user_input_translator" File: //Mac/Home/Desktop/GOMOKU-FPGA/adapters/vga_adapter.v Line: 192
 Info (12128): Elaborating entity "altsyncram" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory" File: //Mac/Home/Desktop/GOMOKU-FPGA/adapters/vga_adapter.v Line: 213
 Info (12130): Elaborated megafunction instantiation "vga_adapter:VGA|altsyncram:VideoMemory" File: //Mac/Home/Desktop/GOMOKU-FPGA/adapters/vga_adapter.v Line: 213
@@ -6232,19 +6215,19 @@ Info (12133): Instantiated megafunction "vga_adapter:VGA|altsyncram:VideoMemory"
     Info (12134): Parameter "CLOCK_ENABLE_INPUT_B" = "BYPASS"
     Info (12134): Parameter "CLOCK_ENABLE_OUTPUT_B" = "BYPASS"
     Info (12134): Parameter "POWER_UP_UNINITIALIZED" = "FALSE"
-    Info (12134): Parameter "INIT_FILE" = "img/yellow.board.colour.mif"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_pun1.tdf
-    Info (12023): Found entity 1: altsyncram_pun1 File: //Mac/Home/Desktop/GOMOKU-FPGA/db/altsyncram_pun1.tdf Line: 33
-Info (12128): Elaborating entity "altsyncram_pun1" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_pun1:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+    Info (12134): Parameter "INIT_FILE" = "img/image.colour.mif"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_a8n1.tdf
+    Info (12023): Found entity 1: altsyncram_a8n1 File: //Mac/Home/Desktop/GOMOKU-FPGA/db/altsyncram_a8n1.tdf Line: 33
+Info (12128): Elaborating entity "altsyncram_a8n1" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_a8n1:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_7la.tdf
     Info (12023): Found entity 1: decode_7la File: //Mac/Home/Desktop/GOMOKU-FPGA/db/decode_7la.tdf Line: 22
-Info (12128): Elaborating entity "decode_7la" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_pun1:auto_generated|decode_7la:decode2" File: //Mac/Home/Desktop/GOMOKU-FPGA/db/altsyncram_pun1.tdf Line: 46
+Info (12128): Elaborating entity "decode_7la" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_a8n1:auto_generated|decode_7la:decode2" File: //Mac/Home/Desktop/GOMOKU-FPGA/db/altsyncram_a8n1.tdf Line: 46
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_01a.tdf
     Info (12023): Found entity 1: decode_01a File: //Mac/Home/Desktop/GOMOKU-FPGA/db/decode_01a.tdf Line: 22
-Info (12128): Elaborating entity "decode_01a" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_pun1:auto_generated|decode_01a:rden_decode_b" File: //Mac/Home/Desktop/GOMOKU-FPGA/db/altsyncram_pun1.tdf Line: 47
+Info (12128): Elaborating entity "decode_01a" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_a8n1:auto_generated|decode_01a:rden_decode_b" File: //Mac/Home/Desktop/GOMOKU-FPGA/db/altsyncram_a8n1.tdf Line: 47
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_ifb.tdf
     Info (12023): Found entity 1: mux_ifb File: //Mac/Home/Desktop/GOMOKU-FPGA/db/mux_ifb.tdf Line: 22
-Info (12128): Elaborating entity "mux_ifb" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_pun1:auto_generated|mux_ifb:mux3" File: //Mac/Home/Desktop/GOMOKU-FPGA/db/altsyncram_pun1.tdf Line: 49
+Info (12128): Elaborating entity "mux_ifb" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_a8n1:auto_generated|mux_ifb:mux3" File: //Mac/Home/Desktop/GOMOKU-FPGA/db/altsyncram_a8n1.tdf Line: 49
 Info (12128): Elaborating entity "vga_pll" for hierarchy "vga_adapter:VGA|vga_pll:mypll" File: //Mac/Home/Desktop/GOMOKU-FPGA/adapters/vga_adapter.v Line: 231
 Info (12128): Elaborating entity "altpll" for hierarchy "vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component" File: //Mac/Home/Desktop/GOMOKU-FPGA/adapters/vga_pll.v Line: 53
 Info (12130): Elaborated megafunction instantiation "vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component" File: //Mac/Home/Desktop/GOMOKU-FPGA/adapters/vga_pll.v Line: 53
@@ -6264,43 +6247,51 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/altp
     Info (12023): Found entity 1: altpll_80u File: //Mac/Home/Desktop/GOMOKU-FPGA/db/altpll_80u.tdf Line: 25
 Info (12128): Elaborating entity "altpll_80u" for hierarchy "vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf Line: 897
 Info (12128): Elaborating entity "vga_controller" for hierarchy "vga_adapter:VGA|vga_controller:controller" File: //Mac/Home/Desktop/GOMOKU-FPGA/adapters/vga_adapter.v Line: 252
-Info (12128): Elaborating entity "hex_decoder" for hierarchy "hex_decoder:comb_870115" File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 170
+Info (12128): Elaborating entity "hex_decoder" for hierarchy "hex_decoder:hex4" File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 186
 Warning (19016): Clock multiplexers are found and protected
-    Warning (19017): Found clock multiplexer Mux15 File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 106
-    Warning (19017): Found clock multiplexer Mux14 File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 106
-    Warning (19017): Found clock multiplexer Mux13 File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 106
-    Warning (19017): Found clock multiplexer Mux12 File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 106
-    Warning (19017): Found clock multiplexer Mux11 File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 106
-    Warning (19017): Found clock multiplexer Mux10 File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 106
-    Warning (19017): Found clock multiplexer Mux9 File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 106
-    Warning (19017): Found clock multiplexer Mux8 File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 106
-    Warning (19017): Found clock multiplexer Mux7 File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 106
-    Warning (19017): Found clock multiplexer Mux6 File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 106
-    Warning (19017): Found clock multiplexer Mux5 File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 106
-    Warning (19017): Found clock multiplexer Mux4 File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 106
-    Warning (19017): Found clock multiplexer Mux3 File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 106
-    Warning (19017): Found clock multiplexer Mux2 File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 106
-    Warning (19017): Found clock multiplexer Mux1 File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 106
-    Warning (19017): Found clock multiplexer Mux0 File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 106
+    Warning (19017): Found clock multiplexer Mux15 File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 136
+    Warning (19017): Found clock multiplexer Mux14 File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 136
+    Warning (19017): Found clock multiplexer Mux13 File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 136
+    Warning (19017): Found clock multiplexer Mux12 File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 136
+    Warning (19017): Found clock multiplexer Mux11 File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 136
+    Warning (19017): Found clock multiplexer Mux10 File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 136
+    Warning (19017): Found clock multiplexer Mux9 File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 136
+    Warning (19017): Found clock multiplexer Mux8 File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 136
+    Warning (19017): Found clock multiplexer Mux7 File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 136
+    Warning (19017): Found clock multiplexer Mux6 File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 136
+    Warning (19017): Found clock multiplexer Mux5 File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 136
+    Warning (19017): Found clock multiplexer Mux4 File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 136
+    Warning (19017): Found clock multiplexer Mux3 File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 136
+    Warning (19017): Found clock multiplexer Mux2 File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 136
+    Warning (19017): Found clock multiplexer Mux1 File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 136
+    Warning (19017): Found clock multiplexer Mux0 File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 136
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[0]" is stuck at GND File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 5
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 5
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 5
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 5
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 5
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 5
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 5
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 5
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 5
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 5
-    Warning (13410): Pin "HEX4[1]" is stuck at GND File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 6
-    Warning (13410): Pin "HEX4[2]" is stuck at GND File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 6
-    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 6
-    Warning (13410): Pin "HEX5[1]" is stuck at GND File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 6
-    Warning (13410): Pin "HEX5[2]" is stuck at GND File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 6
-    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 6
-    Warning (13410): Pin "VGA_SYNC_N" is stuck at VCC File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 7
+    Warning (13410): Pin "LEDR[0]" is stuck at GND File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 11
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 11
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 11
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 11
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 11
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 11
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 11
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 11
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 11
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 11
+    Warning (13410): Pin "HEX2[0]" is stuck at GND File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 12
+    Warning (13410): Pin "HEX2[1]" is stuck at GND File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 12
+    Warning (13410): Pin "HEX2[2]" is stuck at GND File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 12
+    Warning (13410): Pin "HEX2[3]" is stuck at GND File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 12
+    Warning (13410): Pin "HEX2[4]" is stuck at GND File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 12
+    Warning (13410): Pin "HEX2[5]" is stuck at GND File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 12
+    Warning (13410): Pin "HEX2[6]" is stuck at GND File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 12
+    Warning (13410): Pin "HEX3[0]" is stuck at GND File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 12
+    Warning (13410): Pin "HEX3[1]" is stuck at GND File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 12
+    Warning (13410): Pin "HEX3[2]" is stuck at GND File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 12
+    Warning (13410): Pin "HEX3[3]" is stuck at GND File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 12
+    Warning (13410): Pin "HEX3[4]" is stuck at GND File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 12
+    Warning (13410): Pin "HEX3[5]" is stuck at GND File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 12
+    Warning (13410): Pin "HEX3[6]" is stuck at GND File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 12
+    Warning (13410): Pin "VGA_SYNC_N" is stuck at VCC File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 13
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 24 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file /Desktop/GOMOKU-FPGA/output_files/gomoku.map.smsg
@@ -6309,21 +6300,21 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
 Warning: RST port on the PLL is not properly connected on instance vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated|generic_pll1. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: //Mac/Home/Desktop/GOMOKU-FPGA/db/altpll_80u.tdf Line: 33
     Info: Must be connected
 Warning (21074): Design contains 3 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[1]" File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 4
-    Warning (15610): No output dependent on input pin "KEY[2]" File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 4
-    Warning (15610): No output dependent on input pin "KEY[3]" File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 4
-Info (21057): Implemented 1168 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "KEY[1]" File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 10
+    Warning (15610): No output dependent on input pin "KEY[2]" File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 10
+    Warning (15610): No output dependent on input pin "KEY[3]" File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 10
+Info (21057): Implemented 1224 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
-    Info (21059): Implemented 73 output pins
+    Info (21059): Implemented 87 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 1078 logic cells
+    Info (21061): Implemented 1120 logic cells
     Info (21064): Implemented 9 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 49 warnings
-    Info: Peak virtual memory: 5404 megabytes
-    Info: Processing ended: Thu Nov 28 18:26:17 2019
-    Info: Elapsed time: 00:01:16
-    Info: Total CPU time (on all processors): 00:01:29
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 58 warnings
+    Info: Peak virtual memory: 5608 megabytes
+    Info: Processing ended: Tue Dec 03 15:34:55 2019
+    Info: Elapsed time: 00:02:02
+    Info: Total CPU time (on all processors): 00:02:14
 
 
 +------------------------------------------+

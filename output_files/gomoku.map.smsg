@@ -1,2 +1,4 @@
-Info (10281): Verilog HDL Declaration information at gomoku.v(6): object "HEX0" differs only in case from object "hex0" in the same scope File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 6
-Info (10281): Verilog HDL Declaration information at gomoku.v(6): object "HEX1" differs only in case from object "hex1" in the same scope File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 6
+Info (10281): Verilog HDL Declaration information at gomoku.v(12): object "HEX4" differs only in case from object "hex4" in the same scope File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 12
+Info (10281): Verilog HDL Declaration information at gomoku.v(12): object "HEX5" differs only in case from object "hex5" in the same scope File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 12
+Info (10281): Verilog HDL Declaration information at gomoku.v(12): object "HEX0" differs only in case from object "hex0" in the same scope File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 12
+Info (10281): Verilog HDL Declaration information at gomoku.v(12): object "HEX1" differs only in case from object "hex1" in the same scope File: //Mac/Home/Desktop/GOMOKU-FPGA/gomoku.v Line: 12

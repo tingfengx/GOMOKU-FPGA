@@ -6,79 +6,93 @@ KEY[0] => resetn.IN2
 KEY[1] => ~NO_FANOUT~
 KEY[2] => ~NO_FANOUT~
 KEY[3] => ~NO_FANOUT~
-LEDR[0] << <GND>
-LEDR[1] << <GND>
-LEDR[2] << <GND>
-LEDR[3] << <GND>
-LEDR[4] << <GND>
-LEDR[5] << <GND>
-LEDR[6] << <GND>
-LEDR[7] << <GND>
-LEDR[8] << <GND>
-LEDR[9] << <GND>
-HEX0[0] << hex_decoder:hex0.segments[0]
-HEX0[1] << hex_decoder:hex0.segments[1]
-HEX0[2] << hex_decoder:hex0.segments[2]
-HEX0[3] << hex_decoder:hex0.segments[3]
-HEX0[4] << hex_decoder:hex0.segments[4]
-HEX0[5] << hex_decoder:hex0.segments[5]
-HEX0[6] << hex_decoder:hex0.segments[6]
-HEX1[0] << hex_decoder:hex1.segments[0]
-HEX1[1] << hex_decoder:hex1.segments[1]
-HEX1[2] << hex_decoder:hex1.segments[2]
-HEX1[3] << hex_decoder:hex1.segments[3]
-HEX1[4] << hex_decoder:hex1.segments[4]
-HEX1[5] << hex_decoder:hex1.segments[5]
-HEX1[6] << hex_decoder:hex1.segments[6]
-HEX4[0] << hex_decoder:comb_870115.port1
-HEX4[1] << hex_decoder:comb_870115.port1
-HEX4[2] << hex_decoder:comb_870115.port1
-HEX4[3] << hex_decoder:comb_870115.port1
-HEX4[4] << hex_decoder:comb_870115.port1
-HEX4[5] << hex_decoder:comb_870115.port1
-HEX4[6] << hex_decoder:comb_870115.port1
-HEX5[0] << hex_decoder:comb_870116.port1
-HEX5[1] << hex_decoder:comb_870116.port1
-HEX5[2] << hex_decoder:comb_870116.port1
-HEX5[3] << hex_decoder:comb_870116.port1
-HEX5[4] << hex_decoder:comb_870116.port1
-HEX5[5] << hex_decoder:comb_870116.port1
-HEX5[6] << hex_decoder:comb_870116.port1
-VGA_CLK << vga_adapter:VGA.VGA_CLK
-VGA_HS << vga_adapter:VGA.VGA_HS
-VGA_VS << vga_adapter:VGA.VGA_VS
-VGA_BLANK_N << vga_adapter:VGA.VGA_BLANK
-VGA_SYNC_N << vga_adapter:VGA.VGA_SYNC
-VGA_R[0] << vga_adapter:VGA.VGA_R
-VGA_R[1] << vga_adapter:VGA.VGA_R
-VGA_R[2] << vga_adapter:VGA.VGA_R
-VGA_R[3] << vga_adapter:VGA.VGA_R
-VGA_R[4] << vga_adapter:VGA.VGA_R
-VGA_R[5] << vga_adapter:VGA.VGA_R
-VGA_R[6] << vga_adapter:VGA.VGA_R
-VGA_R[7] << vga_adapter:VGA.VGA_R
-VGA_R[8] << vga_adapter:VGA.VGA_R
-VGA_R[9] << vga_adapter:VGA.VGA_R
-VGA_G[0] << vga_adapter:VGA.VGA_G
-VGA_G[1] << vga_adapter:VGA.VGA_G
-VGA_G[2] << vga_adapter:VGA.VGA_G
-VGA_G[3] << vga_adapter:VGA.VGA_G
-VGA_G[4] << vga_adapter:VGA.VGA_G
-VGA_G[5] << vga_adapter:VGA.VGA_G
-VGA_G[6] << vga_adapter:VGA.VGA_G
-VGA_G[7] << vga_adapter:VGA.VGA_G
-VGA_G[8] << vga_adapter:VGA.VGA_G
-VGA_G[9] << vga_adapter:VGA.VGA_G
-VGA_B[0] << vga_adapter:VGA.VGA_B
-VGA_B[1] << vga_adapter:VGA.VGA_B
-VGA_B[2] << vga_adapter:VGA.VGA_B
-VGA_B[3] << vga_adapter:VGA.VGA_B
-VGA_B[4] << vga_adapter:VGA.VGA_B
-VGA_B[5] << vga_adapter:VGA.VGA_B
-VGA_B[6] << vga_adapter:VGA.VGA_B
-VGA_B[7] << vga_adapter:VGA.VGA_B
-VGA_B[8] << vga_adapter:VGA.VGA_B
-VGA_B[9] << vga_adapter:VGA.VGA_B
+LEDR[0] <= <GND>
+LEDR[1] <= <GND>
+LEDR[2] <= <GND>
+LEDR[3] <= <GND>
+LEDR[4] <= <GND>
+LEDR[5] <= <GND>
+LEDR[6] <= <GND>
+LEDR[7] <= <GND>
+LEDR[8] <= <GND>
+LEDR[9] <= <GND>
+HEX0[0] <= hex_decoder:hex0.segments[0]
+HEX0[1] <= hex_decoder:hex0.segments[1]
+HEX0[2] <= hex_decoder:hex0.segments[2]
+HEX0[3] <= hex_decoder:hex0.segments[3]
+HEX0[4] <= hex_decoder:hex0.segments[4]
+HEX0[5] <= hex_decoder:hex0.segments[5]
+HEX0[6] <= hex_decoder:hex0.segments[6]
+HEX1[0] <= hex_decoder:hex1.segments[0]
+HEX1[1] <= hex_decoder:hex1.segments[1]
+HEX1[2] <= hex_decoder:hex1.segments[2]
+HEX1[3] <= hex_decoder:hex1.segments[3]
+HEX1[4] <= hex_decoder:hex1.segments[4]
+HEX1[5] <= hex_decoder:hex1.segments[5]
+HEX1[6] <= hex_decoder:hex1.segments[6]
+HEX2[0] <= <GND>
+HEX2[1] <= <GND>
+HEX2[2] <= <GND>
+HEX2[3] <= <GND>
+HEX2[4] <= <GND>
+HEX2[5] <= <GND>
+HEX2[6] <= <GND>
+HEX3[0] <= <GND>
+HEX3[1] <= <GND>
+HEX3[2] <= <GND>
+HEX3[3] <= <GND>
+HEX3[4] <= <GND>
+HEX3[5] <= <GND>
+HEX3[6] <= <GND>
+HEX4[0] <= hex_decoder:hex4.port1
+HEX4[1] <= hex_decoder:hex4.port1
+HEX4[2] <= hex_decoder:hex4.port1
+HEX4[3] <= hex_decoder:hex4.port1
+HEX4[4] <= hex_decoder:hex4.port1
+HEX4[5] <= hex_decoder:hex4.port1
+HEX4[6] <= hex_decoder:hex4.port1
+HEX5[0] <= hex_decoder:hex5.port1
+HEX5[1] <= hex_decoder:hex5.port1
+HEX5[2] <= hex_decoder:hex5.port1
+HEX5[3] <= hex_decoder:hex5.port1
+HEX5[4] <= hex_decoder:hex5.port1
+HEX5[5] <= hex_decoder:hex5.port1
+HEX5[6] <= hex_decoder:hex5.port1
+VGA_CLK <= vga_adapter:VGA.VGA_CLK
+VGA_HS <= vga_adapter:VGA.VGA_HS
+VGA_VS <= vga_adapter:VGA.VGA_VS
+VGA_BLANK_N <= vga_adapter:VGA.VGA_BLANK
+VGA_SYNC_N <= vga_adapter:VGA.VGA_SYNC
+VGA_R[0] <= vga_adapter:VGA.VGA_R
+VGA_R[1] <= vga_adapter:VGA.VGA_R
+VGA_R[2] <= vga_adapter:VGA.VGA_R
+VGA_R[3] <= vga_adapter:VGA.VGA_R
+VGA_R[4] <= vga_adapter:VGA.VGA_R
+VGA_R[5] <= vga_adapter:VGA.VGA_R
+VGA_R[6] <= vga_adapter:VGA.VGA_R
+VGA_R[7] <= vga_adapter:VGA.VGA_R
+VGA_R[8] <= vga_adapter:VGA.VGA_R
+VGA_R[9] <= vga_adapter:VGA.VGA_R
+VGA_G[0] <= vga_adapter:VGA.VGA_G
+VGA_G[1] <= vga_adapter:VGA.VGA_G
+VGA_G[2] <= vga_adapter:VGA.VGA_G
+VGA_G[3] <= vga_adapter:VGA.VGA_G
+VGA_G[4] <= vga_adapter:VGA.VGA_G
+VGA_G[5] <= vga_adapter:VGA.VGA_G
+VGA_G[6] <= vga_adapter:VGA.VGA_G
+VGA_G[7] <= vga_adapter:VGA.VGA_G
+VGA_G[8] <= vga_adapter:VGA.VGA_G
+VGA_G[9] <= vga_adapter:VGA.VGA_G
+VGA_B[0] <= vga_adapter:VGA.VGA_B
+VGA_B[1] <= vga_adapter:VGA.VGA_B
+VGA_B[2] <= vga_adapter:VGA.VGA_B
+VGA_B[3] <= vga_adapter:VGA.VGA_B
+VGA_B[4] <= vga_adapter:VGA.VGA_B
+VGA_B[5] <= vga_adapter:VGA.VGA_B
+VGA_B[6] <= vga_adapter:VGA.VGA_B
+VGA_B[7] <= vga_adapter:VGA.VGA_B
+VGA_B[8] <= vga_adapter:VGA.VGA_B
+VGA_B[9] <= vga_adapter:VGA.VGA_B
 
 
 |gomoku|keyboard_tracker:keyboard
@@ -493,50 +507,50 @@ mem_address[14] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |gomoku|vga_adapter:VGA|altsyncram:VideoMemory
-wren_a => altsyncram_pun1:auto_generated.wren_a
+wren_a => altsyncram_a8n1:auto_generated.wren_a
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
 rden_b => ~NO_FANOUT~
-data_a[0] => altsyncram_pun1:auto_generated.data_a[0]
-data_a[1] => altsyncram_pun1:auto_generated.data_a[1]
-data_a[2] => altsyncram_pun1:auto_generated.data_a[2]
+data_a[0] => altsyncram_a8n1:auto_generated.data_a[0]
+data_a[1] => altsyncram_a8n1:auto_generated.data_a[1]
+data_a[2] => altsyncram_a8n1:auto_generated.data_a[2]
 data_b[0] => ~NO_FANOUT~
 data_b[1] => ~NO_FANOUT~
 data_b[2] => ~NO_FANOUT~
-address_a[0] => altsyncram_pun1:auto_generated.address_a[0]
-address_a[1] => altsyncram_pun1:auto_generated.address_a[1]
-address_a[2] => altsyncram_pun1:auto_generated.address_a[2]
-address_a[3] => altsyncram_pun1:auto_generated.address_a[3]
-address_a[4] => altsyncram_pun1:auto_generated.address_a[4]
-address_a[5] => altsyncram_pun1:auto_generated.address_a[5]
-address_a[6] => altsyncram_pun1:auto_generated.address_a[6]
-address_a[7] => altsyncram_pun1:auto_generated.address_a[7]
-address_a[8] => altsyncram_pun1:auto_generated.address_a[8]
-address_a[9] => altsyncram_pun1:auto_generated.address_a[9]
-address_a[10] => altsyncram_pun1:auto_generated.address_a[10]
-address_a[11] => altsyncram_pun1:auto_generated.address_a[11]
-address_a[12] => altsyncram_pun1:auto_generated.address_a[12]
-address_a[13] => altsyncram_pun1:auto_generated.address_a[13]
-address_a[14] => altsyncram_pun1:auto_generated.address_a[14]
-address_b[0] => altsyncram_pun1:auto_generated.address_b[0]
-address_b[1] => altsyncram_pun1:auto_generated.address_b[1]
-address_b[2] => altsyncram_pun1:auto_generated.address_b[2]
-address_b[3] => altsyncram_pun1:auto_generated.address_b[3]
-address_b[4] => altsyncram_pun1:auto_generated.address_b[4]
-address_b[5] => altsyncram_pun1:auto_generated.address_b[5]
-address_b[6] => altsyncram_pun1:auto_generated.address_b[6]
-address_b[7] => altsyncram_pun1:auto_generated.address_b[7]
-address_b[8] => altsyncram_pun1:auto_generated.address_b[8]
-address_b[9] => altsyncram_pun1:auto_generated.address_b[9]
-address_b[10] => altsyncram_pun1:auto_generated.address_b[10]
-address_b[11] => altsyncram_pun1:auto_generated.address_b[11]
-address_b[12] => altsyncram_pun1:auto_generated.address_b[12]
-address_b[13] => altsyncram_pun1:auto_generated.address_b[13]
-address_b[14] => altsyncram_pun1:auto_generated.address_b[14]
+address_a[0] => altsyncram_a8n1:auto_generated.address_a[0]
+address_a[1] => altsyncram_a8n1:auto_generated.address_a[1]
+address_a[2] => altsyncram_a8n1:auto_generated.address_a[2]
+address_a[3] => altsyncram_a8n1:auto_generated.address_a[3]
+address_a[4] => altsyncram_a8n1:auto_generated.address_a[4]
+address_a[5] => altsyncram_a8n1:auto_generated.address_a[5]
+address_a[6] => altsyncram_a8n1:auto_generated.address_a[6]
+address_a[7] => altsyncram_a8n1:auto_generated.address_a[7]
+address_a[8] => altsyncram_a8n1:auto_generated.address_a[8]
+address_a[9] => altsyncram_a8n1:auto_generated.address_a[9]
+address_a[10] => altsyncram_a8n1:auto_generated.address_a[10]
+address_a[11] => altsyncram_a8n1:auto_generated.address_a[11]
+address_a[12] => altsyncram_a8n1:auto_generated.address_a[12]
+address_a[13] => altsyncram_a8n1:auto_generated.address_a[13]
+address_a[14] => altsyncram_a8n1:auto_generated.address_a[14]
+address_b[0] => altsyncram_a8n1:auto_generated.address_b[0]
+address_b[1] => altsyncram_a8n1:auto_generated.address_b[1]
+address_b[2] => altsyncram_a8n1:auto_generated.address_b[2]
+address_b[3] => altsyncram_a8n1:auto_generated.address_b[3]
+address_b[4] => altsyncram_a8n1:auto_generated.address_b[4]
+address_b[5] => altsyncram_a8n1:auto_generated.address_b[5]
+address_b[6] => altsyncram_a8n1:auto_generated.address_b[6]
+address_b[7] => altsyncram_a8n1:auto_generated.address_b[7]
+address_b[8] => altsyncram_a8n1:auto_generated.address_b[8]
+address_b[9] => altsyncram_a8n1:auto_generated.address_b[9]
+address_b[10] => altsyncram_a8n1:auto_generated.address_b[10]
+address_b[11] => altsyncram_a8n1:auto_generated.address_b[11]
+address_b[12] => altsyncram_a8n1:auto_generated.address_b[12]
+address_b[13] => altsyncram_a8n1:auto_generated.address_b[13]
+address_b[14] => altsyncram_a8n1:auto_generated.address_b[14]
 addressstall_a => ~NO_FANOUT~
 addressstall_b => ~NO_FANOUT~
-clock0 => altsyncram_pun1:auto_generated.clock0
-clock1 => altsyncram_pun1:auto_generated.clock1
+clock0 => altsyncram_a8n1:auto_generated.clock0
+clock1 => altsyncram_a8n1:auto_generated.clock1
 clocken0 => ~NO_FANOUT~
 clocken1 => ~NO_FANOUT~
 clocken2 => ~NO_FANOUT~
@@ -548,15 +562,15 @@ byteena_b[0] => ~NO_FANOUT~
 q_a[0] <= <GND>
 q_a[1] <= <GND>
 q_a[2] <= <GND>
-q_b[0] <= altsyncram_pun1:auto_generated.q_b[0]
-q_b[1] <= altsyncram_pun1:auto_generated.q_b[1]
-q_b[2] <= altsyncram_pun1:auto_generated.q_b[2]
+q_b[0] <= altsyncram_a8n1:auto_generated.q_b[0]
+q_b[1] <= altsyncram_a8n1:auto_generated.q_b[1]
+q_b[2] <= altsyncram_a8n1:auto_generated.q_b[2]
 eccstatus[0] <= <GND>
 eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|gomoku|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_pun1:auto_generated
+|gomoku|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_a8n1:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -831,7 +845,7 @@ wren_a => decode_7la:decode2.enable
 wren_a => decode_7la:wren_decode_a.enable
 
 
-|gomoku|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_pun1:auto_generated|decode_7la:decode2
+|gomoku|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_a8n1:auto_generated|decode_7la:decode2
 data[0] => w_anode105w[1].IN0
 data[0] => w_anode118w[1].IN1
 data[0] => w_anode126w[1].IN0
@@ -849,7 +863,7 @@ eq[1] <= w_anode118w[2].DB_MAX_OUTPUT_PORT_TYPE
 eq[2] <= w_anode126w[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|gomoku|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_pun1:auto_generated|decode_01a:rden_decode_b
+|gomoku|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_a8n1:auto_generated|decode_01a:rden_decode_b
 data[0] => w_anode143w[1].IN0
 data[0] => w_anode157w[1].IN1
 data[0] => w_anode166w[1].IN0
@@ -863,7 +877,7 @@ eq[1] <= w_anode157w[2].DB_MAX_OUTPUT_PORT_TYPE
 eq[2] <= w_anode166w[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|gomoku|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_pun1:auto_generated|decode_7la:wren_decode_a
+|gomoku|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_a8n1:auto_generated|decode_7la:wren_decode_a
 data[0] => w_anode105w[1].IN0
 data[0] => w_anode118w[1].IN1
 data[0] => w_anode126w[1].IN0
@@ -881,7 +895,7 @@ eq[1] <= w_anode118w[2].DB_MAX_OUTPUT_PORT_TYPE
 eq[2] <= w_anode126w[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|gomoku|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_pun1:auto_generated|mux_ifb:mux3
+|gomoku|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_a8n1:auto_generated|mux_ifb:mux3
 data[0] => data0_wire[0].IN0
 data[1] => data0_wire[1].IN0
 data[2] => data0_wire[2].IN0
@@ -1153,7 +1167,7 @@ mem_address[13] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
 mem_address[14] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|gomoku|hex_decoder:comb_870115
+|gomoku|hex_decoder:hex4
 hex_digit[0] => Decoder0.IN3
 hex_digit[1] => Decoder0.IN2
 hex_digit[2] => Decoder0.IN1
@@ -1167,7 +1181,7 @@ segments[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 segments[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|gomoku|hex_decoder:comb_870116
+|gomoku|hex_decoder:hex5
 hex_digit[0] => Decoder0.IN3
 hex_digit[1] => Decoder0.IN2
 hex_digit[2] => Decoder0.IN1
