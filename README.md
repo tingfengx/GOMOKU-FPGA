@@ -1,9 +1,9 @@
 # GOMOKU-FPGA
 
-Please refer to the walk through slides [here](https://github.com/tingfengx/GOMOKU-FPGA/blob/master/slides/walk_through_slides.pdf) for implementation details and output behavior.
+Please refer to the walk through slides [here](https://tingfengx.github.io/GOMOKU-FPGA/slides/walk_through_slides.pdf) for implementation details and output behavior.
 
 ## Repository Road Map
-``````
+```
 GOMOKU-FPGA/
 |-gomoku.v
 |-DE1_SoC.qsf
@@ -23,7 +23,7 @@ GOMOKU-FPGA/
 |-slides/
 |  |-walk_through_slides.tex
 |  |-walk_through_slides.pdf
-``````
+```
 
 ## Requirements
 - FPGA board: DE1_SoC board with Cyclone V, ```5CSEMA5F31C6```
