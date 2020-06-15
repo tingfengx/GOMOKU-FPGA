@@ -5,8 +5,10 @@ Please refer to the walk through slides [here](https://tingfengx.github.io/GOMOK
 ## Repository Road Map
 ```
 GOMOKU-FPGA/
+├── CSC258\ Final\ Project\ Proposal.pdf
 ├── DE1_SoC.qsf
 ├── README.md
+├── _config.yml
 ├── adapters
 │   ├── Altera_UP_PS2_Command_Out.v
 │   ├── Altera_UP_PS2_Data_In.v
@@ -37,17 +39,12 @@ GOMOKU-FPGA/
 │   └── walk_through_slides.tex
 └── utils
     └── bmp2mif
-        ├── a.out
         ├── bmp2mif.c
-        ├── bmp2mif.exe
-        ├── bmp2mif.ncb
-        ├── bmp2mif.o
-        ├── bmp2mif.sln
-        ├── bmp2mif.suo
-        ├── bmp2mif.vcproj
         ├── gomoku_start.bmp
         ├── image.colour.mif
         └── image.mono.mif
+
+5 directories, 33 files
 ```
 
 ## Requirements
